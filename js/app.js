@@ -44,7 +44,41 @@ if(talent.toLowerCase()==='yes' || talent.toLowerCase()==='y') {
     alert('that is false, my Talent is writing');
 }
 
-console.log(name,birthday,color,typerose,talent);
+
+for(let i=0;i<=3;i++){
+    let age=prompt('How old do you think I am? You have 4 attempts, guess number please');
+    console.log(age);
+    
+    if(age===24){
+     alert('congrates, is correct');
+     break;
+
+    }else if(age<24){
+        alert('Wow, Too low');
+    }else{
+            alert('Oh, Too high');
+        }
+    }
+
+alert('correct answer is 24');
+
+
+let fruits=['Orange','Strawberry','Plum','Watermelon','Apple'];
+for(let i=0;i<=5;i++){
+    let fru=prompt('What kind of fruits do you think I like the most?');
+    console.log(fru);
+    fruits.push(fru);
+if(fru===fruits){
+    alert('congrates, is correct');
+    break;
+}else{
+    console.log(fru);
+}
+}
+document.write('<h1>'+fruits+'</h1>');
+
+console.log(name,birthday,color,typerose,talent,age);
 
 
 alert('We hope you had a great time with us ' + userName + " Come back soon");
+
