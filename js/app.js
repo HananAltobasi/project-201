@@ -45,8 +45,8 @@ if(talent.toLowerCase()==='yes' || talent.toLowerCase()==='y') {
 }
 
 
-for(let i=0;i<=3;i++){
-    let age=prompt('How old do you think I am? You have 4 attempts, guess number please');
+for(let i=0;i<4;i++){
+    let age=parseInt(prompt('How old do you think I am? You have 4 attempts, guess number please'));
     console.log(age);
     
     if(age===24){
@@ -64,18 +64,26 @@ alert('correct answer is 24');
 
 
 let fruits=['Orange','Strawberry','Plum','Watermelon','Apple'];
-for(let i=0;i<=5;i++){
+
+for(let i=0;i<6;i++){
     let fru=prompt('What kind of fruits do you think I like the most?');
     console.log(fru);
-    fruits.push(fru);
-if(fru===fruits){
-    alert('congrates, is correct');
-    break;
-}else{
-    console.log(fru);
-}
-}
-document.write('<h1>'+fruits+'</h1>');
+    
+    for(let j=0;j<4;j++){
+
+        if(fru.toLowerCase()===fruits[j]){
+            alert('congrates, is correct');
+            score+=1;
+            document.getElementById("fru").innerText=('my favfruits are Orange, Strawberry, Plum, Watermelon, Apple');
+            i=6;
+        }
+    }if(i!=6){
+        alert('your answer is false, please try again');
+        document.getElementById("fru").innerText=('my favfruits are Orange, Strawberry, Plum, Watermelon, Apple');
+    }
+    }
+
+alert('correct answer are: Orange, Strawberry, Plum, Watermelon, Apple')
 
 console.log(name,birthday,color,typerose,talent,age);
 
